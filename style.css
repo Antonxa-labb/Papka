@@ -59,6 +59,7 @@ width:96px;
 height:50px;
 }
 
+
 .menu__divid{
 width:2px;
 height:32px;
@@ -66,19 +67,22 @@ height:32px;
 
 .menu__list_margin{
 margin-right: 16px;
+margin-left: 16px;
 }
 
 .menu__list_margin:last-child{
-  margin-right: 0;
-}
+  margin-right: 16px;
+  margin-left: 0;
+}   
 
 
 .menu__logo_margin{
-margin-right: 16px;
+margin-right: auto;
 }
 
 .menu__divid_margin{
-margin-right: 20px;
+margin-right: 16px;
+margin-left: 16px;
 }
 
 button{
@@ -103,7 +107,7 @@ display:none;
 }
 
 .сontent__subtitle::before {
-    content: url('image/highlight.png'); 
+    content: url('image/highlight.svg'); 
     display: inline-block;
     width: 20px;
     margin-right: 0;
@@ -170,24 +174,31 @@ border: 2px solid #B8FFEC;
 .serv__play{
 font-family: "TTlakesM";
 font-size: 16px;
-width:132px;
 height: 24px;
 margin-top: 13px;;
 margin-left: 22px;
 vertical-align: middle;
 }
 
+.serv__play:hover{
+  color: blue;
+}
+
+
+
 .serv__play::before {
-    content: url('image/iconui.png');
+    content: url('image/expand.svg');
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 10px;
     margin-right: 0px;
-    vertical-align: baseline; }
+    vertical-align: sub; }
 
     .menu__divid_margin--bug {
     display: none;
+    margin-right: 16px;
     }
+
 
     .serv__text-two{
     display: none;
@@ -197,6 +208,13 @@ vertical-align: middle;
       display:none;
      }
 
+     .serv__text--mobile{
+     display:none;
+     }
+    
+     .menu__list:hover{
+     background-color: green;
+}
 
 
     @media (min-width: 768px) {
@@ -212,6 +230,21 @@ vertical-align: middle;
     display: none;
     }
 
+  .serv__text--mobile{
+    display: inline-block;
+    padding:0;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-family: "TTLakesR";
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 0;
+  }
+
+  .win{
+    display: none;
+  }
+
     .menu__logo_margin{
       margin-right: auto;
     }
@@ -223,9 +256,10 @@ padding-right: 32px;
 
 .menu__divid_margin--bug {
     display: block;
-    margin-right: 16px;
+    margin-left: 16px;
     }
 
+    
 .serv{
   display:flex;
   flex-direction:row;
@@ -250,6 +284,8 @@ margin-left: 20px;
       display:none;
      }
 
+
+    
 }
 
 
@@ -274,7 +310,7 @@ display: none;
 }
 
 .сontent__subtitle--two::before {
-    content: url('image/highlight.png'); 
+    content: url('image/highlight.svg'); 
     display: inline-block;
     width: 20px;
     margin-right: 0;
