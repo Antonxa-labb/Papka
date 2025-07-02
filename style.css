@@ -1,99 +1,88 @@
 
-
+/* fonts */
 @font-face {
   font-family: "TTlakesB";
   src: url("font-family/TTLakesCondensed-Bold.woff2") format("woff2"),
 }
-
 @font-face {
   font-family: "TTlakesR";
   src: url("font-family/TT\ Lakes\ Regular.woff2") format("woff2"),
 }
-
 @font-face {
   font-family: "TTlakesM";
   src: url("font-family/TT\ Lakes\ Medium.woff2") format("woff2"),
 }
 
+/* global */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
 
   body{
-background-color: #F8F8F8;
-margin:0;
-font-size: 16px;
+    margin:0;
+    width: 100%;
+    min-width:320px;
+    font-size: 16px;
+    overflow-x: hidden;
+    background-color: #F8F8F8;
 }
 
-.img{
-max-width:100%;
+.container {
+  max-width:1160px;
+  min-width: 320px;
+  margin: 0 auto;
 }
 
-
-.menu{
+.topbar{
+background-color: white;
 display: flex;
+gap: 16px;
+padding:12px;
 align-items: center;
-justify-content: center;
-min-width:320px;
-height: 88px;
-background-color: #FFFFFF;
+justify-content: space-between;
 }
 
-
-
-.menu_padding{
-margin-top: auto;
-margin-bottom: auto;
-margin-right: auto;
-margin-left: auto;
+.topbar__one{
+display: flex;
+gap:16px;
+align-items: center;
 }
 
-.menu__list{
+.topbar__two{
+display: flex;
+gap:16px;
+}
+
+.button{
 margin:0;
 width:40px;
 height:40px;
 border-radius: 100%;
 background-color:#FF3E79;
 border:none;
+cursor: pointer;
 }
 
-.menu__logo{
-width:96px;
-height:50px;
+.topbar__two:before{
+content: url('image/divider.svg');
+margin:auto 0;
+margin-right: 7px;
 }
 
-
-.menu__divid{
-width:2px;
-height:32px;
-}
-
-.menu__list_margin{
-margin-right: 16px;
-margin-left: 16px;
-}
-
-.menu__list_margin:last-child{
-  margin-right: 16px;
-  margin-left: 0;
-}   
-
-
-.menu__logo_margin{
-margin-right: auto;
-}
-
-.menu__divid_margin{
-margin-right: 16px;
-margin-left: 16px;
-}
-
-button{
+.button{
 display: flex;
 justify-content: center;
 align-items: center;
 }
 
- 
-.menu__list_margin--bar {
-display:none;
+.button:hover{
+background-color: aquamarine;
 }
 
 .сontent__subtitle {
@@ -101,227 +90,200 @@ display:none;
   font-size: 28px;
   display: flex;
   width: 288px;
-  line-height: 40px; 
+  line-height: 40px;
   margin-bottom:0;
-  
 }
 
 .сontent__subtitle::before {
-    content: url('image/highlight.svg'); 
+    content: url('image/highlight.svg');
     display: inline-block;
     width: 20px;
     margin-right: 0;
     vertical-align: middle;
-  
 }
-.scroll {
+.navigation {
   margin-left: 16px;
   overflow-x: scroll;
-  white-space: nowrap; 
-  width: 100%; 
 }
 
-.scroll::-webkit-scrollbar{
+.navigation::-webkit-scrollbar{
   width:0;
   height: 0;
 }
 
-.scroll__container {
+.navigation__container {
   font-family: "TTlakesM";
   font-size: 16px;
-  display: inline-block; 
-  padding: 0; 
-  margin: 0; 
-  list-style: none; 
-  white-space: nowrap; 
-  width: auto; 
+  display: inline-block;
+  padding: 0;
+  margin-top: 12px;
+  list-style: none;
+  white-space: nowrap;
+  width: auto;
+
 }
 
-
-.scroll__butt {
+.navigation__butt {
   color: #7E7E82;
   display: inline-block;
   padding-right: 16px;
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+  border: 2px solid transparent;
   border-radius: 6px;
   background-color:#F8F8F8;
-;
-
+  cursor: pointer;
 }
 
-.scroll__butt:hover{
+.navigation__butt:hover{
 border: 2px solid #B8FFEC;
 }
 
 .serv{
+  margin-top: 0;
   display:flex;
   flex-direction: column;
   gap:16px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .serv__text{
-  padding:0;
-  margin-left: 16px;
   margin-right: 16px;
+  padding-left: 16px;
   font-family: "TTLakesR";
   text-align: left;
   font-size: 14px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
-.serv__play{
+
+.button__skip{
 font-family: "TTlakesM";
 font-size: 16px;
 height: 24px;
 margin-top: 13px;;
-margin-left: 22px;
+margin-left: 0;
 vertical-align: middle;
+cursor: pointer;
+display: flex;
+align-items: top;
+background: none;
+border: none;
 }
 
-.serv__play:hover{
-  color: blue;
+.button__skip:hover{
+  color: aquamarine;
 }
 
-
-
-.serv__play::before {
+.button__skip::before {
     content: url('image/expand.svg');
-    display: inline-block;
-    width: 30px;
+    width: 24px;
     height: 10px;
-    margin-right: 0px;
-    vertical-align: sub; }
-
-    .menu__divid_margin--bug {
-    display: none;
-    margin-right: 16px;
-    }
-
-
-    .serv__text-two{
-    display: none;
-    }
+    margin-left:16px;
+  }
 
      .desktop{
-      display:none;
-     }
-
-     .serv__text--mobile{
      display:none;
      }
-    
-     .menu__list:hover{
-     background-color: green;
+
+     .serv__text_mobile{
+     display:none;
+     }
+
+.topbar__onetwo{
+  display:none;
 }
 
 
     @media (min-width: 768px) {
-  .menu__list_margin--bar {
+
+    .topbar__onetwo{
     display: flex;
-    }
-    .menu_topbar{
-      display:flex;
-      gap:16px;
-      margin-right: 16px;
-    }
-    .menu__divid_margin{
-    display: none;
+    gap:16px;
+    margin-left: auto;
     }
 
-  .serv__text--mobile{
+    .topbar__logo::before{
+    content: url('image/divider.svg');
+    margin:auto 0;
+    margin-right: 7px;
+    }
+
+  .serv__text_mobile{
     display: inline-block;
-    padding:0;
-  margin-left: 16px;
+    padding-left: 16px;;
   margin-right: 16px;
   font-family: "TTLakesR";
   text-align: left;
   font-size: 14px;
   margin-bottom: 0;
+  padding-top: 14px;
   }
 
   .win{
     display: none;
   }
 
-    .menu__logo_margin{
-      margin-right: auto;
-    }
-
-    .menu{
-padding-left: 16px;
-padding-right: 32px;
-    }
-
-.menu__divid_margin--bug {
-    display: block;
-    margin-left: 16px;
-    }
-
-    
 .serv{
   display:flex;
   flex-direction:row;
   justify-content: space-between;
-  margin-left: 24px;
-  margin-right: 24px;
-  margin-top: 32px;
+  margin-left: 0;
+  margin-right: 0;
   margin-bottom: 40px;
-  width: 720px;
-  height: 208px;;
+  width: 100%;
+  height: 100%;
+
 }
- 
+
 .serv__logo{
   border-radius: 5px;
+  width: 50%;
 }
 
 .serv__play{
+width: 50%;
 margin-top: 10px;
-margin-left: 20px;
 }
+
 .desktop{
-      display:none;
-     }
-
-
-    
+display:none;
+}
 }
 
 
 @media (min-width: 1120px) {
 
-.menu{
-  display:none;
-}
-
-.сontent__subtitle{
+.topbar{
 display: none;
 }
 
-.сontent__subtitle--two{
+.сontent__subtitle{
   font-family: "TTlakesB";
   font-size: 28px;
   display: flex;
   width: 288px;
-  line-height: 40px; 
+  line-height: 40px;
   margin-bottom:0;
   margin-top:0;
 }
 
-.сontent__subtitle--two::before {
-    content: url('image/highlight.svg'); 
-    display: inline-block;
-    width: 20px;
-    margin-right: 0;
-    vertical-align: middle;
-  
+.nave{
+  padding-top: 42px;
+  display: flex;
+  gap: 16px;
+  padding-top: 42px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .desktop{
       display:flex;
       align-items: center;
-      padding-top:42px;
+      max-width: 100%;
      }
 
 .dekstop_button{
@@ -332,39 +294,26 @@ display: none;
   font-family:TTlakesM;
 }
 
-.dekstop_button:last-child{
-  margin-right: 50px;
-}
-
-.dekstop_button--one{
-  margin-left: auto;
-}
-
-.scroll__container{
-  
-   white-space: normal;
+.navigation__container{
+  white-space: normal;
 }
 
 .serv{
-  min-width: 1050px;
-
+  min-width: 100%;
 }
 
 .test{
+  padding-left: 16px;
   width: 50%;
 }
 
 .serv__logo{
   width: 50%;
- height: 300px;
  gap:10px;
 }
 
 .win{
   display:inline;
 }
-
-
 }
 
-    

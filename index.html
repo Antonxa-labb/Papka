@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="normalize.css">
-        <link rel="stylesheet" href="style.css">
 
-    </head>
-    <body>
-        <header>
-            <nav class="menu">
-                <button class="menu__list menu__list_margin">
-                    <img class="menu__png" src="image\icon.svg" alt="">
-                </button>
-                <img class="menu__divid menu__divid_margin--bug" src="image/divider.svg" alt="">
-                <img class="menu__logo menu__logo_margin" src="image/Group.svg" alt="">
-                <img class="menu__divid menu__divid_margin" src="image/divider.svg" alt="">
-                <div class="menu_topbar">
-                <button class="menu__list menu__list_margin--bar">
-                    <img class="menu__png" src="image/icono.svg" alt="">
-                </button>
-                 <button class="menu__list menu__list_margin--bar">
-                    <img class="menu__png" src="image/iconat.svg" alt="">
-                </button>
-                 <button class="menu__list menu__list_margin--bar">
-                    <img class="menu__png" src="image/Groupp.svg" alt="">
-                </button>
-              </div>
-              <img class="menu__divid menu__divid_margin--bug" src="image/divider.svg" alt="">
-                 <button class="menu__list menu__list_margin">
-                    <img class="menu__png" src="image/Groupy.svg" alt="">
-                </button>
-                <button class="menu__list menu__list_margin">
-                    <img class="menu__png" src="image/iconu.svg" alt="">
-                </button>
-            </nav>
-        </header>
-        <main class="content">
-          <h2 class="сontent__subtitle">Услуги и сервисы</h2>
-          <nav class="desktop">
-           <h2 class="сontent__subtitle--two">Услуги и сервисы</h2>
-           <div class="dekstop_button dekstop_button--one ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="topbar__one">
+          <button class="button">
+            <img class="button__image" src="image/icon.svg" alt="">
+          </button>
+          <img class="topbar__logo" src="image/Group.svg" alt="">
+        </div>
+
+        <div class="topbar__onetwo">
+          <button class="button">
+            <img class="button__image" src="image/icono.svg" alt="">
+          </button>
+          <button class="button">
+            <img class="button__image" src="image/iconat.svg" alt="">
+          </button>
+          <button class="button">
+            <img class="button__image" src="image/Groupp.svg" alt="">
+          </button>
+        </div>
+
+
+        <div class="topbar__two">
+          <button class="button">
+            <img class="button__image" src="image/Groupy.svg" alt="">
+          </button>
+          <button class="button">
+            <img class="button__image" src="image/iconu.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <div class="nave">
+        <h2 class="сontent__subtitle">Услуги и сервисы</h2>
+        <div class="desktop">
+          <div class="dekstop_button dekstop_button--one ">
             <span>Оставить заявку</span>
-            <button class="menu__list">
-                    <img class="menu__png" src="image/Groupy.svg" alt="">
-                </button>
-              </div>
-              <div class="dekstop_button">
-                 <span>Статус ремонта</span>
-                <button class="menu__list">
-                    <img class="menu__png" src="image/iconu.svg" alt="">
-                </button>
-              </div>
-                 
-           </nav>
-           <div class="scroll">
-  <ul class="scroll__container">
-    <li class="scroll__butt">Ремонтируемые устройства</li>
-    <li class="scroll__butt">Дополнительные услуги</li>
-    <li class="scroll__butt">Цены на услуги</li>
-    <li class="scroll__butt">Адреса сервисных центров</li>
-    <li class="scroll__butt">Специальные цены</li>
-    <li class="scroll__butt">Отзывы</li>
-  </ul>
-</div>
-<article class="serv">
-  <section class="test">
-<p class="serv__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-  Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-  <p class="serv__text serv__text--mobile">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера <span class="win">
-что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
-в свою очередь, советуют нас родным и близким.
-  </span>
-</p>
-  
-<div class="serv__play">Читать далее</div>
-</section>
- <img class="serv__logo" src="image/MG3223.jpg" alt="">
- </article>
-      </main>
-    </body>
-</html>
+            <button class="button">
+              <img class="button__image" src="image/Groupy.svg" alt="">
+            </button>
+          </div>
+          <div class="dekstop_button">
+            <span>Статус ремонта</span>
+            <button class="button">
+              <img class="button__image" src="image/iconu.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__container">
+          <li class="navigation__butt">Ремонтируемые устройства</li>
+          <li class="navigation__butt">Дополнительные услуги</li>
+          <li class="navigation__butt">Цены на услуги</li>
+          <li class="navigation__butt">Адреса сервисных центров</li>
+          <li class="navigation__butt">Специальные цены</li>
+          <li class="navigation__butt">Отзывы</li>
+        </ul>
+      </nav>
+      <article class="serv">
+        <section class="test">
+          <p class="serv__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+            Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+          <p class="serv__text serv__text_mobile">Мы успешно работаем с 1992 года и заслужили репутацию надежного
+            партнера <span class="win">
+              что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+              рекомендациям и,
+              в свою очередь, советуют нас родным и близким.
+            </span>
+          </p>
 
+          <div class="serv__play">
+            <button class="button__skip">Читать далее</button>
+          </div>
+        </section>
+        <img class="serv__logo" src="image/MG3223.jpg" alt="">
+      </article>
+    </div>
+  </main>
+</body>
+
+</html>
