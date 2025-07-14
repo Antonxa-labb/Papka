@@ -81,6 +81,12 @@ color:black;
 font-family: "TTlakesM";
 }
 
+.menu-burger__list li a{
+display: inline-block;
+height:15px;
+width: 300px;
+}
+
 .contacts__icon{
 display:flex;
 gap: 16px;
