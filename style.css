@@ -38,7 +38,7 @@ body {
 
 .app-container {
   position: fixed;
-  width: 360px;
+  width: 320px;
   height: 100%;
   background-color: white;
   overflow-y: scroll;
@@ -121,7 +121,7 @@ a {
 
 .menu-burger__list li a:hover {
   opacity: 0.5;
-  transition:0.2s ease;
+  transition:0.3s ease;
 }
 
 .menu-burger__list li:hover::before {
