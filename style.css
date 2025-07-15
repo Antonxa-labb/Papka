@@ -42,6 +42,7 @@ body {
   height: 100%;
   background-color: white;
   overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 1000;
 }
 
@@ -129,7 +130,7 @@ a {
   display: flex;
   position: absolute;
   left: -24px;
-  top: -8px;
+  top: -10px;
 }
 
 /* Бургер-меню конец */
