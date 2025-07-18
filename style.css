@@ -62,22 +62,15 @@ body {
   height: 0;
 }
 
-.onecap {
+.action {
   display: flex;
-}
-
-.cap {
-  margin: 0;
-  display: flex;
-  gap: 16px;
+  gap:16px;
   align-items: center;
   padding: 24px;
 }
 
-.button_margin {
-  margin: 24px;
-  margin-left: auto;
-  margin-top: 30px;
+.button_margin{
+margin-left: auto;
 }
 
 .menu-burger__list {
@@ -118,7 +111,8 @@ a {
   padding-top: 20px;
 }
 
-.address a {
+.mail, 
+.number {
   display: block;
   font-style: normal;
 }
@@ -138,7 +132,7 @@ a {
   gap: 10px;
 }
 
-.languages_ru {
+.languages_active{
   color: #7E7E82;
 }
 
