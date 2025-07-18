@@ -94,7 +94,7 @@ a {
   width: 300px;
 }
 
-.contacts__icon {
+.contacts {
   display: flex;
   gap: 16px;
   padding-left: 24px;
