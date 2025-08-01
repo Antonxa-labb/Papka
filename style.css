@@ -64,13 +64,13 @@ body {
 
 .action {
   display: flex;
-  gap:16px;
+  gap: 16px;
   align-items: center;
   padding: 24px;
 }
 
-.button_margin{
-margin-left: auto;
+.button_margin {
+  margin-left: auto;
 }
 
 .menu-burger__list {
@@ -111,7 +111,7 @@ a {
   padding-top: 20px;
 }
 
-.mail, 
+.mail,
 .number {
   display: block;
   font-style: normal;
@@ -132,7 +132,7 @@ a {
   gap: 10px;
 }
 
-.languages__item_active{
+.languages__item_active {
   color: #7E7E82;
 }
 
@@ -438,5 +438,136 @@ a {
 
   .win {
     display: inline;
+  }
+}
+
+.swiper-pagination {
+  text-align: center;
+
+}
+
+.swiper-container {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 20px;
+}
+
+.brands_title {
+  margin: 16px;
+  font-family: "TTlakesR";
+  font-size: 16px;
+  color: #7E7E82;
+}
+
+.brands_list {
+  overflow: hidden;
+  padding: 16px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.brands_list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.brand-item {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  border: 1px #EAEAEA solid;
+  box-sizing: border-box;
+  padding: 16px;
+  gap: 16px;
+
+}
+
+.brand-item:hover {
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button--background {
+  background-color: #FFFFFF;
+  border: 2px #FF3E79 solid;
+}
+
+.brands_img {
+  max-width: 110px;
+}
+
+.brands_toggle {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+
+
+  .brands_list {
+    overflow: visible !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .swiper-slide {
+    width: 224px !important;
+    flex-shrink: 0;
+  }
+
+
+  .swiper-slide:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .brands_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: 10px;
+    column-gap: 24px;
+    max-height: 180px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .brands_toggle {
+    display: block;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    margin-left: 10px;
+    font-family: "TTlakesM";
+
+  }
+
+  .brands_toggle::before {
+    content: url("image/expand.svg");
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .brands_toggle:hover {
+    opacity: 0.5;
+  }
+
+  .expanded {
+    max-height: 1000px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands_list {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
