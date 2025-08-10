@@ -1017,7 +1017,9 @@ margin: 0;
 
 }
 
+@media (min-width: 1120px) {
+  .button__skip {
+    display: none;
+  }
+}
 
-
-
-    

@@ -310,3 +310,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const button = document.querySelector('.button__skip');
+  const mobileText = document.querySelector('.serv__text_mobile');
+  const winText = document.querySelector('.win');
+
+  // Проверка элементов
+  if (!button) {
+    console.error('❌ Кнопка .button__skip не найдена');
+    return;
+  }
+  if (!winText) {
+    console.error('❌ Элемент .win не найден');
+    return;
+  }
+
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    const width = window.innerWidth;
+
+    // Скрываем кнопку после клика (по желанию)
+    button.style.display = 'none';
+
+    // Логика открытия
+    if (width < 768) {
+      // Мобильные: открываем оба
+      if (mobileText) {
+        mobileText.style.display = 'block';
+      }
+      winText.style.display = 'block';
+    } else if (width >= 768 && width < 1120) {
+      // Планшеты: только .win
+      winText.style.display = 'block';
+    }
+    // На десктопе ≥1120px — ничего не делаем (уже видно)
+  });
+});
