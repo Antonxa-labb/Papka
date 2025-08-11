@@ -485,6 +485,7 @@ a {
   position: relative;
   overflow: visible;
   padding-bottom: 20px;
+  padding-right: 20px;
 }
 
 .bcg-title{
@@ -517,14 +518,14 @@ margin-top: 35px;
 
 .brand-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  height: 72px;
   background-color: #FFFFFF;
   border-radius: 6px;
   border: 1px #EAEAEA solid;
   box-sizing: border-box;
   padding: 16px;
-  gap: 16px;
+  gap: 10px;
 
 }
 
@@ -552,7 +553,7 @@ margin-top: 35px;
   .brands_list {
     overflow: visible !important;
     padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-right: 40px !important;
   }
 
 .brands .swiper-slide,
@@ -618,10 +619,16 @@ margin-top: 35px;
   }
 }
 
+.repair .swiper-container {
+  padding-right: 95px !important;
+}
 
+.price .swiper-container{
+margin-right: 80px !important;
+}
 
 .repair_item{
-  width:240px;
+  width:230px;
   height: 160px;
   display: block;
 }

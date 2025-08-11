@@ -347,3 +347,77 @@ document.addEventListener('DOMContentLoaded', function () {
     // На десктопе ≥1120px — ничего не делаем (уже видно)
   });
 });
+
+// Глобальные переменные
+
+
+// Инициализация при загрузке и ресайзе
+function initSlider() {
+  const list = document.querySelector('.brands_list');
+  const container = document.querySelector('.brands .swiper-container');
+  const pagination = document.querySelector('.brands .swiper-pagination');
+  const toggle = document.querySelector('.brands_toggle');
+  const isMobile = window.innerWidth < 768;
+
+  // Проверка
+  if (!list || !container) {
+    console.error('❌ Элементы .brands_list или .swiper-container не найдены');
+    return;
+  }
+
+  // На мобильных — включаем Swiper
+  if (isMobile && !swiperBrands) {
+    // Добавляем классы
+    list.classList.add('swiper-wrapper');
+    list.querySelectorAll('li').forEach(li => {
+      li.classList.add('swiper-slide');
+    });
+
+    // Инициализируем Swiper
+    swiperBrands = new Swiper(container, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: pagination,
+        clickable: true,
+      },
+      observer: true,
+      observeParents: true,
+    });
+
+    // Скрываем кнопку "Показать все"
+    if (toggle) toggle.style.display = 'none';
+  }
+
+  // На десктопе — выключаем Swiper
+  else if (!isMobile && swiperBrands) {
+    swiperBrands.destroy(true, true);
+    swiperBrands = null;
+
+    // Убираем классы
+    list.classList.remove('swiper-wrapper');
+    list.querySelectorAll('li').forEach(li => {
+      li.classList.remove('swiper-slide');
+    });
+
+    // Сбрасываем стили
+    list.removeAttribute('style');
+    list.querySelectorAll('li').forEach(li => {
+      li.removeAttribute('style');
+    });
+
+    // Показываем кнопку
+    if (toggle) toggle.style.display = 'block';
+  }
+}
+
+// Запуск при загрузке
+document.addEventListener('DOMContentLoaded', () => {
+  initSlider();
+
+  // Перезапуск при ресайзе
+  window.addEventListener('resize', () => {
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(initSlider, 150);
+  });
+});
