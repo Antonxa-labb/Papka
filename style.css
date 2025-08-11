@@ -1,17 +1,17 @@
 
 @font-face {
   font-family: "TTlakesB";
-  src: url("font-family/TTLakesCondensed-Bold.woff2") format("woff2"),
+  src: url("font-family/TTLakesCondensed-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "TTlakesR";
-  src: url("font-family/TT\ Lakes\ Regular.woff2") format("woff2"),
+  src: url("font-family/TTLakes-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "TTlakesM";
-  src: url("font-family/TT\ Lakes\ Medium.woff2") format("woff2"),
+  src: url("font-family/TTLakes-Medium.woff2") format("woff2");
 }
 
 /* global */
