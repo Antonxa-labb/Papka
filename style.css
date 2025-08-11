@@ -624,10 +624,6 @@ margin-top: 35px;
   padding-right: 95px !important;
 }
 
-.price .swiper-container{
-margin-right: 80px !important;
-}
-
 .repair_item{
   width:230px;
   height: 160px;
@@ -697,6 +693,10 @@ opacity: 0.5;
 }
 
 /* Цены на услуги */
+
+.price .swiper-container {
+  padding-right: 90px; 
+}
 
 .price_offer{
 display: block;
