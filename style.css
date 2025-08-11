@@ -920,6 +920,10 @@ color:#7E7E82;
 }
 
 .feedback-explanation--color{
+color:#7E7E82;
+}
+
+.feedback-explanation--color:hover{
 color: #FF3E79;
 }
 
