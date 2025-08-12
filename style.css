@@ -106,6 +106,7 @@ a {
   margin-top: 16px;
 }
 
+
 @media (min-width: 1119px) {
   .contacts{
     margin-top: 250px;
@@ -490,7 +491,7 @@ a {
 
 .bcg-title{
 padding: 10px;
-background-color: #FFFFFF;
+background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
 border-top: solid 1px #D9FFF5;
 margin-top: 35px;
 }
@@ -619,9 +620,8 @@ margin-top: 35px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
 .repair .swiper-container {
-  padding-right: 95px !important;
+  padding-right: 80px;
 }
 
 .repair_item{
@@ -650,6 +650,10 @@ margin-top: 32px;
 }
 
 @media (min-width: 768px){
+
+.repair .swiper-container {
+padding-right: 0;
+}
 
 .repair_list{
 flex-wrap: wrap;
@@ -688,6 +692,10 @@ opacity: 0.5;
 
 .repair_list{
   gap: 16px;
+}
+
+.repair_toggle{
+  display: none;
 }
 
 }
