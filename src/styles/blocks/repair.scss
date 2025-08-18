@@ -1,0 +1,84 @@
+// Блок "Ремонт техники" — слайдер на мобилке, сетка на десктопе
+.repair {
+  & .swiper-container {
+    padding-right: 80px;
+
+    @media (min-width: 768px) {
+      padding-right: 0;
+    }
+  }
+
+  &_item {
+    width: 230px;
+    height: 160px;
+    display: block;
+    text-decoration: none;
+  }
+
+  &_title {
+    font-family: $font-M;
+    margin-top: 0;
+    color: #1B1C21;
+  }
+
+  &_list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 32px;
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      max-height: 160px;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      gap: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      gap: 16px;
+    }
+  }
+
+  &_toggle {
+    display: block;
+    border: none;
+    background: none;
+    text-align: center;
+    margin-left: 10px;
+    font-family: $font-M;
+    cursor: pointer;
+    @include hover-opacity();
+
+    &::before {
+      content: url("../image/expand.svg"); 
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+.repair .swiper-slide {
+  width: 224px;
+}
+
+// Кнопка "Вызов мастера" — отдельный элемент
+.button--location {
+  margin-top: 70px;
+  margin-left: 150px;
+}
+
+// Класс для раскрытия списка
+.expanded {
+  max-height: 1000px;
+}

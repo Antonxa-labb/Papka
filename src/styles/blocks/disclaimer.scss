@@ -1,0 +1,80 @@
+// Подвал сайта — копирайт, ссылки, политика
+.disclaimer {
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid $color-divider;
+  font-family: $font-R;
+  font-size: $font-size-small;
+  color: $color-text;
+
+  &_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 16px;
+  }
+
+  &_copyright,
+  &_developed {
+    margin: 0;
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+
+    a {
+      color: $color-text;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &_politic,
+  &_oferta {
+    display: block;
+    font-family: $font-R;
+    color: $color-text;
+    max-width: 350px;
+    text-align: center;
+  }
+}
+
+// Адаптив: планшет и десктоп
+@media (min-width: 768px) {
+  .disclaimer_container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .disclaimer_links {
+    flex-direction: row;
+    margin: 0;
+    gap: 32px;
+  }
+
+  .disclaimer_politic,
+  .disclaimer_oferta {
+    text-align: left;
+  }
+}
+
+// Адаптив: большой десктоп
+@media (min-width: 1120px) {
+  .button__skip {
+    display: none;
+  }
+}

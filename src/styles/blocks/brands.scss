@@ -1,0 +1,133 @@
+
+.brands{
+overflow: hidden;
+width: 100%;
+max-width: 100vw;
+
+&_list {
+  overflow: hidden;
+  padding: 16px;
+  list-style: none;
+  margin-bottom: 0;
+
+
+&::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+}
+
+&_img {
+  max-width: 110px;
+}
+
+&_toggle {
+  display: none;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  margin-left: 10px;
+  font-family: "TTlakesM";
+  cursor: pointer;
+  @include hover-opacity();
+
+  &::before {
+  content: url("../image/expand.svg");
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  }
+
+}
+
+}
+
+.bcg-title{
+padding: 10px;
+background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+border-top: solid 1px #D9FFF5;
+margin-top: 35px;
+}
+
+.one-title {
+  margin: 16px;
+  font-family: "TTlakesR";
+  font-size: 16px;
+  color: #7E7E82;
+  width: 90%;
+  text-transform: uppercase;
+}
+
+.brand-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $color-white;
+  border-radius: 6px;
+  border: 1px solid $color-border;
+  box-sizing: border-box;
+  padding: 16px;
+  gap: 10px;
+  height: 72px;
+  @include hover-inset-shadow();
+}
+
+.button--background {
+  background-color: $color-white;
+  border: 2px solid $color-accent;
+}
+
+@media (max-width: 767px) {
+
+  .brands_list {
+    overflow: visible !important;
+    padding-left: 16px !important;
+    padding-right: 40px !important;
+  }
+
+.brands,
+.repair {
+  & .swiper-slide{
+  width: 224px !important;
+  flex-shrink: 0;
+}
+}
+  .swiper-slide:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .brands_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: 10px;
+    column-gap: 24px;
+    min-height: 100px;
+    max-height: 145px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+
+  .brands_toggle {
+    display: block;
+  }
+
+  .expanded {
+    max-height: 1000px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands_list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

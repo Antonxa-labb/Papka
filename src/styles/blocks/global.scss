@@ -1,0 +1,51 @@
+/* global */
+html {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $color-bg;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+.brands,
+.repair,
+.price {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.swiper-container {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+.overlay{
+  display: block;
+}
+}

@@ -1,0 +1,195 @@
+.content {
+  .nave {
+    padding-top: 42px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.сontent__subtitle {
+  font-family: $font-B;
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0;
+  width: 288px;
+  display: flex;
+
+  &::before {
+    content: url('../image/highlight.svg');
+    display: inline-block;
+    width: 20px;
+    margin-right: 0;
+    vertical-align: middle;
+  }
+}
+
+.desktop {
+  display: none;
+}
+
+.navigation {
+  margin-left: 16px;
+  overflow-x: scroll;
+  background-color: transparent;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.navigation__container {
+  font-family: $font-M;
+  font-size: $font-size-base;
+  display: inline-block;
+  padding: 0;
+  margin-top: 12px;
+  list-style: none;
+  white-space: nowrap;
+  width: auto;
+
+
+  @media (min-width: 1120px) {
+    white-space: normal;
+  }
+}
+
+.navigation__butt {
+  color: $color-text;
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  background-color: transparent;
+  cursor: pointer;
+  @include hover-border-color();
+}
+
+.serv {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100%;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+.serv__text {
+  margin-right: 16px;
+  padding-left: 16px;
+  font-family: $font-R;
+  text-align: left;
+  font-size: $font-size-small;
+  margin: 0;
+}
+
+.serv__text_mobile {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    padding-left: 16px;
+    margin-right: 16px;
+    font-family: $font-R;
+    text-align: left;
+    font-size: $font-size-small;
+    padding-top: 14px;
+  }
+}
+
+.button__skip {
+  display: block;
+  font-family: $font-M;
+  font-size: 16px;
+  height: 16px;
+  margin-top: 13px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-left: 0;
+  cursor: pointer;
+  @include hover-opacity(); 
+
+  &::before {
+    content: url('../image/expand.svg');
+    width: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+}
+
+// Адаптив: планшет
+@media (min-width: 768px) {
+  .win {
+    display: none;
+  }
+
+  .serv__logo {
+    border-radius: 5px;
+    width: 50%;
+  }
+
+  .serv__play {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+// Адаптив: десктоп
+@media (min-width: 1120px) {
+
+  .content{
+    margin-left: 320px;
+  }
+
+  .desktop {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+
+    .dekstop_button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 32px;
+      font-family: $font-M;
+    }
+  }
+
+  .serv {
+    min-width: 100%;
+  }
+
+  .test {
+    padding-left: 16px;
+    width: 50%;
+  }
+
+  .serv__logo {
+    width: 50%;
+    gap: 10px;
+  }
+
+  .win {
+    display: inline;
+  }
+
+  .button__skip {
+    display: none;
+  }
+}
