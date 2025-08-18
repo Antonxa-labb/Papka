@@ -1,0 +1,135 @@
+.app-container {
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  background-color: $color-white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1000;
+  @include shadow();
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .contacts {
+    display: flex;
+    gap: 16px;
+    padding-left: 24px;
+    margin: 0;
+    margin-top: 16px;
+
+    @media (min-width: 1119px) {
+      margin-top: 250px;
+    }
+  }
+
+  .contacts__icon-element {
+    list-style: none;
+  }
+
+  .address {
+    padding-left: 24px;
+    padding-top: 20px;
+  }
+
+  .mail,
+  .number {
+    display: block;
+    font-style: normal;
+    text-decoration: none;
+    color:$color-black;
+    font-family: $font-M;
+  }
+
+  .address .number {
+    font-family: $font-B;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .languages {
+    margin-top: 30px;
+    margin-bottom: 24px;
+    padding-left: 24px;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  .languages__item{
+    text-decoration: none;
+    color: $color-black;
+    font-family: $font-R;
+  }
+
+  .languages__item_active {
+    color: $color-text;
+  }
+
+  .action {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .button_margin {
+    margin-left: auto;
+  }
+
+  .menu-burger__list {
+    list-style-type: none;
+    padding: 24px;
+  }
+
+  .menu-burger__element {
+    margin-bottom: 40px;
+  }
+
+  .menu-burger__list li a {
+    display: inline-block;
+    height: 30px;
+    width: 300px;
+    text-decoration: none;
+    color: black;
+    font-family: $font-M;
+  
+
+    @include hover-opacity();
+  
+}
+}
+
+.menu-burger__list li{
+  position: relative;
+}
+
+.menu-burger__list li:hover::before {
+    content: url("../image/highlight.svg");
+    position: absolute;
+    left: -24px;
+    top: -9px;
+  }
+
+
+.app-container.hidden {
+  display: none;
+}
+
+
+@media (min-width: 1120px) {
+  #open-sidebar,
+  #close-sidebar {
+    display: none !important;
+  }
+  .app-container.hidden {
+  display: block;
+}
+
+.app-container{
+  box-shadow: none;
+}
+}

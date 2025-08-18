@@ -1,0 +1,66 @@
+// Тень для бургер меню
+@mixin shadow() {
+  box-shadow: 15px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+// Для плавного затемнения при наведении
+@mixin hover-opacity() {
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+// Для тени у карточек
+@mixin hover-inset-shadow(
+  $x: 0px,
+  $y: 2px,
+  $blur: 4px,
+  $color: rgba(0, 0, 0, 0.2),
+  $duration: 0.3s,
+  $easing: ease
+) {
+  transition: box-shadow $duration $easing;
+
+  &:hover {
+    box-shadow: inset $x $y $blur $color;
+  }
+}
+
+// Опасити для кнопок
+@mixin hover-opacity($opacity: 0.5, $duration: 0.3s, $easing: ease) {
+  opacity: 1;
+  transition: opacity $duration $easing;
+
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+/// Миксин для плавной смены цвета текста и фона при наведении
+@mixin hover-color-bg(
+  $hover-color: $color-accent,
+  $hover-bg: black,
+  $duration: 0.3s,
+  $easing: ease
+) {
+  transition: color $duration $easing, background-color $duration $easing;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg;
+  }
+}
+
+/// Плавное изменение цвета обводки при наведении
+@mixin hover-border-color(
+  $color: #B8FFEC,
+  $duration: 0.3s,
+  $easing: ease
+) {
+  transition: border-color $duration $easing;
+
+  &:hover {
+    border-color: $color;
+  }
+}

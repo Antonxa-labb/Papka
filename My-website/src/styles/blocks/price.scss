@@ -1,0 +1,161 @@
+// Цены на услуги — слайдер на мобилке, таблица на десктопе
+.price {
+  & .swiper-container {
+    padding-right: 90px;
+  }
+
+  &_offer {
+    display: block;
+    font-family: $font-M;
+    margin: 16px;
+    width: auto;
+    color: $color-black;
+    text-decoration: none;
+    cursor: pointer;
+    @include hover-opacity();
+
+    &::after {
+      content: url("../image/dropdown.svg");
+      height: 16px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  }
+
+  &_explanation {
+    display: block;
+    font-family: $font-R;
+    margin: 16px;
+    width: auto;
+    color: $color-black;
+  }
+
+  &_grid {
+    display: none;
+  }
+
+  &_list {
+    padding-left: 16px;
+    gap: 16px;
+    margin-top: 35px;
+  }
+
+  &_item {
+    background-color: $color-white;
+    border-radius: $border-radius;
+    height: 185px;
+    padding: 16px;
+  }
+
+  &_button img {
+  display: block;
+  flex-shrink: 0;
+}
+
+  &_button {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 119px;
+    height: 32px;
+    border: 0;
+    border-radius: 25px;
+    background-color: $color-accent;
+    color: $color-white;
+    font-family: $font-B;
+    font-weight: 600;
+    text-transform: uppercase;
+    align-items: center;
+    cursor: pointer;
+    @include hover-color-bg();
+  }
+
+  & .swiper-slide {
+    width: 260px;
+  }
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price_text--one {
+  font-family: $font-R;
+  color: $color-text;
+  margin: 0;
+}
+
+.price_text--two {
+  font-family: $font-R;
+  margin-top: 5px;
+}
+
+.price_grid-table{
+  display: none;
+   margin-right: 16px;
+}
+
+.price_grid-table-title--header{
+  display: none;
+}
+
+// Адаптив: планшет и десктоп
+@media (min-width: 768px) {
+
+  .price_grid-table-title--header{
+  display: block;
+  margin-left: 10px;
+}
+
+  .price_list {
+    display: none;
+  }
+
+  .price_explanation {
+    margin-top: 24px;
+    max-width: 500px;
+  }
+
+  .price-grid {
+    display: block;
+  }
+
+  .price_grid-table {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: auto repeat(5, auto);
+    gap: 16px;
+    border-radius: $border-radius;
+    justify-content: flex-start;
+    margin-left: 24px;
+    padding: 10px 16px 16px;
+    background-color: $color-white;
+    align-items: center;
+    font-family: $font-R;
+  }
+
+  .price_grid-table-title {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    margin-left: 40px;
+    margin-top: 31px;
+    margin-bottom: 16px;
+    font-family: $font-R;
+    color: $color-text;
+  }
+
+  .price_cell {
+    padding: 10px;
+  }
+
+  .row-divider {
+    grid-column: 1 / -1;
+    border: none;
+    height: 1px;
+    background-color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+  }
+}

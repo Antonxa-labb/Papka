@@ -1,0 +1,1042 @@
+
+@font-face {
+  font-family: "TTlakesB";
+  src: url("font-family/TTLakes-Condensed-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "TTlakesR";
+  src: url("font-family/TTLakes-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "TTlakesM";
+  src: url("font-family/TTLakes-Medium.woff2") format("woff2");
+}
+
+/* global */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-color: #F8F8F8;
+}
+
+/* Бургер-меню начало */
+
+@media (max-width: 1120px) {
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+}
+
+
+.app-container {
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1000;
+  box-shadow: 15px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.app-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.action {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 24px;
+}
+
+.button_margin {
+  margin-left: auto;
+}
+
+.menu-burger__list {
+  list-style-type: none;
+  padding: 24px;
+}
+
+.menu-burger__list .menu-burger__element {
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "TTlakesM";
+}
+
+.menu-burger__list li a {
+  display: inline-block;
+  height: 30px;
+  width: 300px;
+}
+
+.contacts {
+  display: flex;
+  gap: 16px;
+  padding-left: 24px;
+  margin: 0;
+  margin-top: 16px;
+}
+
+
+@media (min-width: 1119px) {
+  .contacts{
+    margin-top: 250px;
+  }
+}
+
+.contacts__icon-elememt {
+  list-style: none;
+}
+
+.address {
+  padding-left: 24px;
+  padding-top: 20px;
+}
+
+.mail,
+.number {
+  display: block;
+  font-style: normal;
+}
+
+.address .number {
+  font-family: "TTlakesB";
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.languages {
+  margin-top: 30px;
+  margin-bottom: 24px;
+  padding-left: 24px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.languages__item_active {
+  color: #7E7E82;
+}
+
+.menu-burger__list .menu-burger__element {
+  position: relative;
+}
+
+.menu-burger__list li a:hover {
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.menu-burger__list li:hover::before {
+  content: url("image/highlight.svg");
+  display: flex;
+  position: absolute;
+  left: -24px;
+  top: -10px;
+}
+
+@media (min-width: 1120px) {
+  #open-sidebar,
+  #close-sidebar {
+    display: none !important;
+  }
+}
+
+/* Бургер-меню конец */
+
+
+/* .app-container.hidden {
+  display: none;
+} */
+
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.topbar {
+  background-color: white;
+  display: flex;
+  gap: 16px;
+  padding: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__one {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.topbar__two {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #FF3E79;
+  border: none;
+  cursor: pointer;
+}
+
+.topbar__two:before {
+  content: url('image/divider.svg');
+  margin: auto 0;
+  margin-right: 7px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: aquamarine;
+}
+
+.сontent__subtitle {
+  font-family: "TTlakesB";
+  font-size: 28px;
+  display: flex;
+  width: 288px;
+  line-height: 40px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+
+
+.сontent__subtitle::before {
+  content: url('image/highlight.svg');
+  display: inline-block;
+  width: 20px;
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+.navigation {
+  margin-left: 16px;
+  overflow-x: scroll;
+}
+
+.navigation::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.navigation__container {
+  font-family: "TTlakesM";
+  font-size: 16px;
+  display: inline-block;
+  padding: 0;
+  margin-top: 12px;
+  list-style: none;
+  white-space: nowrap;
+  width: auto;
+
+}
+
+.navigation__butt {
+  color: #7E7E82;
+  display: inline-block;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: #F8F8F8;
+  cursor: pointer;
+}
+
+.navigation__butt:hover {
+  border: 2px solid #B8FFEC;
+}
+
+.serv {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.serv__text {
+  margin-right: 16px;
+  padding-left: 16px;
+  font-family: "TTLakesR";
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.button__skip {
+  display: flex;
+  font-family: "TTlakesM";
+  font-size: 16px;
+  height: 24px;
+  margin-top: 13px;
+  vertical-align: middle;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-left: 0;
+  height: 16px;
+}
+
+.button__skip:hover {
+ opacity: 0.5;
+}
+
+.button__skip::before {
+  content: url('image/expand.svg');
+  width: 24px;
+  margin-left: 10px;
+}
+
+.desktop {
+  display: none;
+}
+
+.serv__text_mobile {
+  display: none;
+}
+
+.topbar__onetwo {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+
+  .topbar__onetwo {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+  }
+
+  .topbar__logo::before {
+    content: url('image/divider.svg');
+    margin: auto 0;
+    margin-right: 7px;
+  }
+
+  .serv__text_mobile {
+    display: inline-block;
+    padding-left: 16px;
+    ;
+    margin-right: 16px;
+    font-family: "TTLakesR";
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-top: 14px;
+  }
+
+  .win {
+    display: none;
+  }
+
+  .serv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 100%;
+
+
+  }
+
+  .serv__logo {
+    border-radius: 5px;
+    width: 50%;
+  }
+
+  .serv__play {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1120px) {
+
+  /* .app-container {
+  display: block;
+} */
+
+  .app-container{
+  box-shadow: none;
+  }
+
+  .content {
+    margin-left: 320px;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+
+
+  .сontent__subtitle {
+    font-family: "TTlakesB";
+    font-size: 28px;
+    display: flex;
+    width: 288px;
+    line-height: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 500;
+  }
+
+  .nave {
+    padding-top: 42px;
+    display: flex;
+    gap: 16px;
+    padding-top: 42px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .desktop {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .dekstop_button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 32px;
+    font-family: TTlakesM;
+  }
+
+  .navigation__container {
+    white-space: normal;
+  }
+
+  .serv {
+    min-width: 100%;
+  }
+
+  .test {
+    padding-left: 16px;
+    width: 50%;
+  }
+
+  .serv__logo {
+    width: 50%;
+    gap: 10px;
+  }
+
+  .win {
+    display: inline;
+  }
+}
+
+/* Бренды */
+
+.swiper-container {
+  position: relative;
+  overflow: visible;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.brands_list {
+  overflow: hidden;
+  padding: 16px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.brands_list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.brand-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  border: 1px #EAEAEA solid;
+  box-sizing: border-box;
+  padding: 16px;
+  gap: 10px;
+  height: 72px;
+
+}
+
+.brand-item:hover {
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button--background {
+  background-color: #FFFFFF;
+  border: 2px #FF3E79 solid;
+}
+
+.brands_img {
+  max-width: 110px;
+}
+
+.brands_toggle {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+
+
+  .brands_list {
+    overflow: visible !important;
+    padding-left: 16px !important;
+    padding-right: 40px !important;
+  }
+
+.brands .swiper-slide,
+.repair .swiper-slide {
+  width: 224px !important;
+  flex-shrink: 0;
+}
+
+  .swiper-slide:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .brands_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    gap: 10px;
+    column-gap: 24px;
+    min-height: 100px;
+    max-height: 180px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+
+  .brands_toggle {
+    display: block;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    margin-left: 10px;
+    font-family: "TTlakesM";
+
+  }
+
+  .brands_toggle::before {
+    content: url("image/expand.svg");
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .brands_toggle:hover {
+    opacity: 0.5;
+  }
+
+  .expanded {
+    max-height: 1000px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands_list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.repair .swiper-container {
+  padding-right: 80px;
+}
+
+.repair_item{
+  width:230px;
+  height: 160px;
+  display: block;
+}
+
+.repair_title{
+  font-family: "TTlakesM";
+  margin-top: 0;
+}
+
+.button--location{
+  margin-top: 70px;
+  margin-left: 150px;
+}
+
+.repair_list{
+display: flex;
+gap:16px;
+list-style: none;
+padding: 0;
+margin-left: 20px;
+margin-top: 32px;
+}
+
+@media (min-width: 768px){
+
+.repair .swiper-container {
+padding-right: 0;
+}
+
+.repair_list{
+flex-wrap: wrap;
+max-height: 160px;
+overflow: hidden;
+transition: max-height 0.3s ease;
+gap:24px;
+}
+
+.expanded {
+max-height: 1000px;
+}
+
+.repair_toggle{
+display: block;
+border: none;
+background-color: transparent;
+text-align: center;
+margin-left: 10px;
+font-family: "TTlakesM";
+}
+
+.repair_toggle::before {
+content: url("image/expand.svg");
+display: inline-block;
+font-size: 16px;
+vertical-align: middle;
+}
+
+.repair_toggle:hover {
+opacity: 0.5;
+}
+}
+
+@media (min-width: 1120px) {
+
+.repair_list{
+  gap: 16px;
+}
+
+.repair_toggle{
+  display: none;
+}
+
+}
+
+/* Цены на услуги */
+
+.price .swiper-container {
+  padding-right: 90px;
+}
+
+.price_offer{
+display: block;
+font-family: "TTlakesM";
+margin: 16px;
+width: auto;
+}
+
+.price_offer:hover{
+opacity: 0.5;
+}
+
+.price_offer::after{
+ content: url("image/dropdown.svg");
+display: inline-block;
+font-size: 16px;
+vertical-align: middle;
+margin-left: 10px;
+}
+
+.price_explanation{
+display: block;
+font-family: "TTlakesR";
+margin: 16px;
+width: auto;
+}
+
+.price-grid{
+  display: none;
+}
+
+.price_list{
+  padding-left: 16px;
+  gap: 16px;
+  margin-top: 35px;
+}
+
+.price_item{
+background-color: #FFFFFF;
+border-radius: 6px;
+height: 185px;
+}
+
+.price_button{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 119px;
+  height: 32px;
+  border: 0;
+  border-radius: 25px;
+  background-color: #FF3E79;
+  color:#FFFFFF;
+  font-family: "TTlakesB";
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.price_button:hover{
+color:#FF3E79;
+background-color: black;
+}
+
+.price .swiper-slide {
+  width: 260px;
+}
+
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price_item{
+padding: 16px;
+}
+
+.price_text--one{
+font-family: "TTlakesR";
+color: #7E7E82;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.price_text--two{
+font-family: "TTlakesR";
+margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+
+.price_list{
+  display: none;
+}
+
+.price_explanation{
+  margin-top: 24px;
+  max-width: 500px;
+}
+
+.price-grid{
+display: block;
+}
+
+.price_grid-table {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: auto repeat(5, auto);
+  gap: 16px;
+  width: 100%;
+  border-radius: 6px;
+  justify-content: flex-start;
+  margin-left: 24px;
+  padding: 10px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  background-color: #FFFFFF;
+  align-items: center;
+  font-family: "TTlakesR";
+}
+
+.price_grid-table-title{
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  margin-left: 40px;
+  margin-top: 31px;
+  margin-bottom: 16px;
+  font-family: "TTlakesR";
+  color:#7E7E82;
+}
+
+.price_cell {
+  padding: 10px;
+}
+
+.row-divider {
+  grid-column: 1 / -1;
+  border: none;
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 0;
+  padding: 0;
+}
+
+}
+
+/* Обратная связь */
+
+.feedback-form{
+width: 440px;
+position: fixed;
+top: 0;
+right: 0;
+background-color: #FFFFFF;
+height: 100%;
+z-index: 1000;
+transform: translateX(120%);
+transition: transform 0.3s ease;
+}
+
+.feedback-form.open {
+  transform: translateX(0);
+}
+
+
+.feedback-form--one.open {
+  transform: translateX(0);
+}
+
+
+.form-input{
+display: block;
+}
+
+.feedback-form_title{
+font-family: "TTlakesB";
+font-weight: 400;
+margin-top: 40px;
+margin-bottom: 0;
+}
+
+.feedback-form_title::before{
+content: url("image/highlight.svg");
+display: inline-block;
+font-size: 16px;
+vertical-align: middle;
+margin-right: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 38px;
+  left: -70px;
+}
+
+.form-body{
+  padding: 24px;
+}
+
+.form-input{
+width: 376px;
+height: 48px;
+margin-bottom: 16px;
+border-radius: 8px;
+border: #EAEAEA 1px solid;
+font-family: "TTlakesM";
+padding:10px;
+}
+
+.form-input:nth-child(4){
+height: 118px;
+margin-bottom: 0;
+}
+
+.feedback-explanation{
+display: block;
+font-family: "TTlakesM";
+font-size: 14px;
+font-weight: 550;
+margin-left: 24px;
+max-width: 350px;
+color:#7E7E82;
+}
+
+.feedback-explanation--color{
+color:#7E7E82;
+}
+
+.feedback-explanation--color:hover{
+color: #FF3E79;
+}
+
+.form-submit-btn{
+width: auto;
+margin-left: auto;
+margin-right: 24px;
+margin-top: 23px;
+}
+
+@media (max-width: 1140px){
+
+.feedback-form{
+width: 320px;
+max-height: 676px;
+}
+
+.form-input{
+width: 288px;
+margin-right: 16px;
+}
+
+.feedback-explanation{
+width: 288px;
+}
+
+.close-btn {
+  position: static;
+  margin-left: 16px;
+  margin-top: 24px;
+}
+
+.call-input{
+margin-bottom: 0;
+padding-bottom: 0;
+}
+
+}
+
+
+.disclaimer {
+  padding: 24px 0;
+  text-align: center;
+  border-top: solid 1px #D9FFF5;
+  font-family: "TTlakesR";
+  font-size: 14px;
+  color: #7e7e82;
+}
+
+.disclaimer_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.disclaimer_copyright,
+.disclaimer-developed {
+  margin: 0;
+}
+
+.disclaimer_links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.disclaimer_politic,
+.disclaimer_oferta{
+display: block;
+font-family: "TTlakesR";
+color: #7e7e82;
+max-width: 350px;
+}
+
+.disclaimer_links a:hover {
+  color: #ff3e79;
+}
+
+@media (min-width: 768px){
+
+
+.disclaimer_container {
+ display: flex;
+ justify-content: space-around;
+ max-width: 100%;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ align-content: center;
+}
+
+.disclaimer_links{
+flex-direction: row;
+margin: 0;
+}
+
+}
+
+@media (min-width: 1120px) {
+  .button__skip {
+    display: none;
+  }
+}
+
+
+.brands,
+.repair,
+.price {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.swiper-container {
+  overflow: hidden;
+}

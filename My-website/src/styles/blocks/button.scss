@@ -1,0 +1,19 @@
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: $color-accent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include hover-opacity();
+
+&--background {
+    background-color: #fff;
+    border: 2px solid #FF3E79;
+}
+
+}
+

@@ -1,0 +1,124 @@
+// Форма обратной связи — выезжающая панель
+.feedback-form {
+  width: 440px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $color-white;
+  height: 100%;
+  z-index: 1000;
+  transform: translateX(120%);
+  transition: transform 0.3s ease;
+
+  &.open,
+  &--one.open {
+    transform: translateX(0);
+  }
+
+  &_title {
+    font-family: $font-B;
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    &::before {
+      content: url("../image/highlight.svg");
+      display: inline-block;
+      width: 20px;
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}
+
+// Кнопка закрытия
+.close-btn {
+  position: absolute;
+  top: 38px;
+  left: -70px;
+}
+
+// Тело формы
+.form-body {
+  padding: 24px;
+}
+
+// Поля ввода
+.form-input {
+  display: block;
+  width: 376px;
+  height: 48px;
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  font-family: $font-M;
+  font-size: $font-size-base;
+
+  &:nth-child(4) {
+    height: 118px;
+    margin-bottom: 0;
+    resize: vertical;
+  }
+}
+
+// Пояснение под формой
+.feedback-explanation {
+  display: block;
+  font-family: $font-M;
+  font-size: 14px;
+  font-weight: 550;
+  margin-left: 24px;
+  max-width: 350px;
+  color: $color-text;
+  text-decoration: none;
+
+  &--color {
+    color: $color-text;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &--color{
+    text-decoration: none;
+  }
+}
+
+
+
+// Кнопка отправки
+.form-submit-btn {
+  width: auto;
+  margin-left: auto;
+  margin-right: 24px;
+  margin-top: 23px;
+}
+
+// Адаптив: мобильные и планшеты (до 1140px)
+@media (max-width: 1140px) {
+  .feedback-form {
+    width: 320px;
+    max-height: 676px;
+  }
+
+  .form-input {
+    width: 288px;
+  }
+
+  .feedback-explanation {
+    width: 288px;
+  }
+
+  .close-btn {
+    position: static;
+    margin-left: 16px;
+    margin-top: 24px;
+  }
+
+  .call-input {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
